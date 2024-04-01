@@ -2,12 +2,12 @@ version: "3"
 
 services:
   frontend:
-    build: azur-front/
+    build: azur_front/
     ports:
       - 3000:3000
 
   backend:
-    build: azur-back/
+    build: azur_back/
     network_mode: host
     depends_on:
       - frontend
