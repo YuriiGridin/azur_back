@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  frontend:
+    build: azur-front/
+    ports:
+      - 3000:3000
+
+  backend:
+    build: azur-back/
+    network_mode: host
+    depends_on:
+      - frontend
